@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>BIenvenido {{saludo}} </h1>
+   
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Poblacion</th>
+        </tr>
+        {% for c in ciudades %}
+            {% if c.id < 10 %}
+            <tr>
+                <th>{{c.id}}</th>
+                <th>{{c.name}}</th>
+                <th>{{c.population}}</th>
+            </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+
+</body>
+</html>
