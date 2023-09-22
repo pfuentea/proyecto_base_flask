@@ -7,8 +7,14 @@
 
 </head>
 <body>
+
+    <style>
+        h1{
+            background-color: {{color}};
+        }
+    </style>
     <h1>BIenvenido {{saludo}} </h1>
-   
+
     <table border="1">
         <tr>
             <th>ID</th>
@@ -25,6 +31,11 @@
             {% endif %}
         {% endfor %}
     </table>
+    {% for c in ciudades %}
+    {% if c.id < 10 %}
+    {{c}}
+    {% endif %}
+    {% endfor %}
 
 </body>
 </html>
